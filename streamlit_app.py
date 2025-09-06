@@ -8,7 +8,7 @@ from datetime import datetime
 # Page Config
 # -----------------------
 st.set_page_config(
-    page_title="Team Data Manager",
+    page_title="Daily IN&OUT NG parts",
     page_icon="📊",
     layout="wide"
 )
@@ -28,7 +28,7 @@ EXCEL_FILE = "team_data.xlsx"
 if os.path.exists(EXCEL_FILE):
     df = pd.read_excel(EXCEL_FILE)
 else:
-    df = pd.DataFrame(columns=["Date", "Item", "Quantity", "Notes"])
+    df = pd.DataFrame(columns=["Line", "Description", "Issue", "In","Out","Balance"])
 
 
 # -----------------------
